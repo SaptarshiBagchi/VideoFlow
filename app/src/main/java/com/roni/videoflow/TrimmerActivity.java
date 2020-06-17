@@ -115,9 +115,9 @@ public class TrimmerActivity extends AppCompatActivity implements OnTrimVideoLis
                 Toast.makeText(TrimmerActivity.this, "Video at : " + uri.getPath(), Toast.LENGTH_SHORT).show();
             }
         });
-        // Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-        // intent.setDataAndType(uri, "video/mp4");
-        //  startActivity(intent);
+         Intent intent = new Intent(this, DetailsActivity.class);
+         intent.putExtra("filepath", uri.getPath());
+          startActivity(intent);
         // finish();
 
     }

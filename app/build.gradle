@@ -26,7 +26,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'life.knowledge4:k4l-video-trimmer:1.0'
-   // implementation 'com.github.AndroidDeveloperLB:VideoTrimmer:#'
+    // implementation 'com.github.AndroidDeveloperLB:VideoTrimmer:#'
     implementation 'com.deep.videotrimmer:videotrimmer:1.0'
 
 
