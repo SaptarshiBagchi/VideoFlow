@@ -16,6 +16,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main {
+            res.srcDirs = ['src/main/res', 'src/main/res/layouts/feed', 'src/main/res/layouts/items']
+        }
+    }
 }
 
 dependencies {
@@ -28,6 +33,7 @@ dependencies {
     implementation 'life.knowledge4:k4l-video-trimmer:1.0'
     // implementation 'com.github.AndroidDeveloperLB:VideoTrimmer:#'
     implementation 'com.deep.videotrimmer:videotrimmer:1.0'
+    implementation 'com.android.support:design:28.0.0'
 
 
 }

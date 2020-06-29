@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.card.MaterialCardView xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="4dp"
+    android:layout_margin="20dp"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <View
+                android:background="@drawable/trans_gradient"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/play_button"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="32dp"
+                    android:src="@drawable/ic_play_video"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:textSize="12sp"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/post_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="20th June"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/profile_pic"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/semi_trans_black_bg"
+                        android:ellipsize="marquee"
+                        android:maxLength="18"
+                        android:singleLine="true"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        android:text="Saptarshi Bagchi"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:id="@+id/profile_pic"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@android:color/darker_gray" />
+                </RelativeLayout>
+            </android.support.constraint.ConstraintLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:id="@+id/title"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="15dp"
+            android:textSize="18sp"
+            android:text="Check out this random video That i am posting today "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_gravity="start"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:background="@drawable/ic_remove_red_eye_grey_24dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+
+                <TextView
+                    android:id="@+id/view_count"
+                    android:layout_marginLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="10k views"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:background="@drawable/ic_comment"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:id="@+id/comment_count"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/comment_color"
+                    android:text="10k"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/ic_like"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:id="@+id/like_count"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/like_color"
+                    android:text="60k"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:background="@android:color/black"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="3dp"
+                    android:layout_height="3dp"/>
+                <TextView
+                    android:id="@+id/dislike_count"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/dislike_color"
+                    android:text="5k"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.design.card.MaterialCardView>
