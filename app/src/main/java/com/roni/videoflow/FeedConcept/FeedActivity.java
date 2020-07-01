@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.littlemango.stacklayoutmanager.StackLayoutManager;
 import com.roni.videoflow.Adapters.VideoItemAdapter;
 import com.roni.videoflow.Models.VideoItemModel;
 import com.roni.videoflow.R;
@@ -27,14 +28,26 @@ public class FeedActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feed);
+        feedList = (RecyclerView) findViewById(R.id.feedList);
 
         //ArrayList<VideoItemModel> items = VideoItems.getItems();
 
-        feedList = (RecyclerView) findViewById(R.id.feedList);
-        feedList.setLayoutManager(new LinearLayoutManager(this));
+        initRecycler();
+
+    }
+
+
+    private void initRecycler(){
+        //in the construction method
+        StackLayoutManager manager = new StackLayoutManager(StackLayoutManager.ScrollOrientation.RIGHT_TO_LEFT, 3);
+
+
+       // manager.setPagerMode(true);
+        manager.setItemOffset(50);
+
+        feedList.setLayoutManager(manager);
 
         feedList.setAdapter(new VideoItemAdapter(VideoItems.getItems(), this));
-
     }
 
     @Override
@@ -49,9 +62,7 @@ public class FeedActivity extends AppCompatActivity {
 
         } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
 
-            feedList.setLayoutManager(new LinearLayoutManager(this));
-            Log.d(TAG, "onConfigurationChanged:  potrait");
-            feedList.setAdapter(new VideoItemAdapter(VideoItems.getItems(), this));
+            initRecycler();
 
         }
 
