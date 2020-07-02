@@ -21,6 +21,11 @@ android {
             res.srcDirs = ['src/main/res', 'src/main/res/layouts/feed', 'src/main/res/layouts/items']
         }
     }
+    compileOptions{
+
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -37,6 +42,7 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     implementation 'com.littlemango:stacklayoutmanager:1.0.5'
+    implementation 'com.google.android.exoplayer:exoplayer:2.9.6'
 
 
 }

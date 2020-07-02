@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FeedConcept.VideoFullScreenActivity"></activity>
+        <activity android:name=".FeedConcept.VideoFullScreenActivity" android:screenOrientation="landscape"></activity>
         <activity android:name=".FeedConcept.FeedActivity"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden">
 
