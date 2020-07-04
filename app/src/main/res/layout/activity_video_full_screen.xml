@@ -8,7 +8,7 @@
     tools:context=".FeedConcept.VideoFullScreenActivity">
 
     <com.google.android.exoplayer2.ui.PlayerView
-
+        app:controller_layout_id="@layout/exo_playback_control_view"
         android:id="@+id/playerView"
         app:show_shuffle_button="false"
         app:show_buffering="always"
